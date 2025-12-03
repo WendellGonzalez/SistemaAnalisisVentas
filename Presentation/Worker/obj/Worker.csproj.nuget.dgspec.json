@@ -1,0 +1,319 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Presentation/Worker/Worker.csproj": {}
+  },
+  "projects": {
+    "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/Application.csproj",
+        "packagesPath": "/Users/wendellgonzalez/.nuget/packages/",
+        "outputPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/wendellgonzalez/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/Domain.csproj": {
+                "projectPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/Domain.csproj",
+        "packagesPath": "/Users/wendellgonzalez/.nuget/packages/",
+        "outputPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/wendellgonzalez/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Infraestructure/Infraestructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Infraestructure/Infraestructure.csproj",
+        "projectName": "Infraestructure",
+        "projectPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Infraestructure/Infraestructure.csproj",
+        "packagesPath": "/Users/wendellgonzalez/.nuget/packages/",
+        "outputPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Infraestructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/wendellgonzalez/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/Application.csproj": {
+                "projectPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/Application.csproj"
+              },
+              "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/Domain.csproj": {
+                "projectPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[33.1.0, )"
+            },
+            "EFCore.BulkExtensions": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
+            "System.Linq.Async": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "System.Linq.AsyncEnumerable": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Presentation/Worker/Worker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Presentation/Worker/Worker.csproj",
+        "projectName": "Worker",
+        "projectPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Presentation/Worker/Worker.csproj",
+        "packagesPath": "/Users/wendellgonzalez/.nuget/packages/",
+        "outputPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Presentation/Worker/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/wendellgonzalez/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/Application.csproj": {
+                "projectPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/Application.csproj"
+              },
+              "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/Domain.csproj": {
+                "projectPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/Domain.csproj"
+              },
+              "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Infraestructure/Infraestructure.csproj": {
+                "projectPath": "/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Infraestructure/Infraestructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

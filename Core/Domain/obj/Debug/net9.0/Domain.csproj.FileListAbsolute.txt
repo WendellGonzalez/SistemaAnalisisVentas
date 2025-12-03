@@ -1,0 +1,11 @@
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/bin/Debug/net9.0/Domain.deps.json
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/bin/Debug/net9.0/Domain.dll
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/bin/Debug/net9.0/Domain.pdb
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/Domain.AssemblyInfoInputs.cache
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/Domain.AssemblyInfo.cs
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/Domain.csproj.CoreCompileInputs.cache
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/Domain.dll
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/refint/Domain.dll
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/Domain.pdb
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/ref/Domain.dll
