@@ -11,9 +11,9 @@ namespace Domain.Entities.Dwh.Facts
         [Key]
         public int VentaKey { get; set; }
         public int OrderID { get; set; }
-        public int CustomerID { get; set; }
-        public int ProductID { get; set; }
-        public int FechaID { get; set; }
+        public int CustomerKey { get; set; }
+        public int ProductKey { get; set; }
+        public int FechaKey { get; set; }
         public int Quantity { get; set; }
         public decimal TotalPrice { get; set; }
     }

@@ -33,7 +33,8 @@ namespace Application.Services.Transformation.CSV
                     FirstName = c.FirstName,
                     LastName = c.LastName,
                     City = c.City,
-                    Country = c.Country
+                    Country = c.Country,
+                    DataSource = "CSV"
                 }));
 
                 return customers;

@@ -9,3 +9,4 @@
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/refint/Domain.dll
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/Domain.pdb
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/ref/Domain.dll
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Domain/obj/Debug/net9.0/Domain.sourcelink.json

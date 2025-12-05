@@ -34,7 +34,8 @@ namespace Application.Services.Transformation.CSV
                     ProductID = p.ProductID,
                     ProductName = p.ProductName,
                     Category = p.Category,
-                    Price = p.Price
+                    Price = p.Price,
+                    DataSource = "CSV"
                 }));
 
                 return products;

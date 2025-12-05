@@ -13,3 +13,4 @@
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/obj/Debug/net9.0/refint/Application.dll
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/obj/Debug/net9.0/Application.pdb
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/obj/Debug/net9.0/ref/Application.dll
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Core/Application/obj/Debug/net9.0/Application.sourcelink.json

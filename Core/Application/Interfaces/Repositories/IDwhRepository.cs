@@ -9,7 +9,7 @@ namespace Application.Interfaces.Repositories
 {
     public interface IDwhRepository
     {
-        Task<ServiceResponse> LoadDimData(DimCollection dimCollection);
-        Task<ServiceResponse> LoadFactData(FactCollection factCollection, DimCollection dimCollection);
+        Task<ServiceResponse> LoadData(DimCollection dimCollection,FactCollection factCollection);
+        // Task<ServiceResponse> LoadFactData(FactCollection factCollection, DimCollection dimCollection);
     }
 }

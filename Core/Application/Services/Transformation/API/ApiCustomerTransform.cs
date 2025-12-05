@@ -34,7 +34,8 @@ namespace Application.Services.Transformation.API
                     FirstName = c.FirstName,
                     LastName = c.LastName,
                     City = c.City,
-                    Country = c.Country
+                    Country = c.Country,
+                    DataSource = "API"
                 }));
 
                 return customers;

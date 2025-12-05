@@ -28,19 +28,13 @@ public class Worker : BackgroundService
 
                 await CollectionService.ExectuteETLProcess(_serviceProvider);
 
-                // _logger.LogInformation("{Success} - {Message}", Result.Success, Result.Message);
-
-                // Console.WriteLine("\n=========================================================================\n");
-                // Console.WriteLine(Result.Success);
-                // Console.WriteLine(Result.Message);
-                // Console.WriteLine("\n=========================================================================\n");
             }
             catch (Exception e)
             {
                 _logger.LogError(e, "Error en la carga de datos a la Dwh");
             }
 
-            await Task.Delay(10000, stoppingToken);
+            await Task.Delay(50000, stoppingToken);
         }
     }
 }

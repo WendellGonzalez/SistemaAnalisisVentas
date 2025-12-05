@@ -32,7 +32,8 @@ namespace Application.Services.Transformation.API
                     ProductID = p.ProductID,
                     ProductName = p.ProductName,
                     Category = p.CategoryName,
-                    Price = p.Price
+                    Price = p.Price,
+                    DataSource = "API"
                 }));
 
                 return products;

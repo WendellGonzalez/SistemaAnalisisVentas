@@ -14,7 +14,8 @@ namespace Application.DTOs
         public string? LastName { get; set; }
 
         public string? City { get; set; }
-
         public string? Country { get; set; }
+
+        public string? DataSource { get; set; }
     }
 }

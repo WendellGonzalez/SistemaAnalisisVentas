@@ -34,7 +34,7 @@ namespace Application.Services.Collections
                 }
 
                 return allCustomers
-                .OrderBy(o => o.CustomerID)
+                // .OrderBy(o => o.DataSource.ToUpper())
                 .GroupBy(c => c.CustomerID)
                 .Select(g => g.First())
                 .ToList();

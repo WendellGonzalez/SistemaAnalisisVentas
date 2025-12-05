@@ -34,7 +34,6 @@ namespace Application.Services.Collections
                 }
 
                 return allProducts
-                .OrderBy(o => o.ProductID)
                 .GroupBy(p => p.ProductID)
                 .Select(g => g.First())
                 .ToList();

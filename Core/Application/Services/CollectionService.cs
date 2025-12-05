@@ -12,23 +12,20 @@ namespace Application.Services
 {
     public static class CollectionService
     {
-        private static async Task<ServiceResponse> ExecuteAllDataLoading(IDwhRepository repository, ICustomersCollection customersCollection, IProductsCollection productCollection, IFechasCollection fechasCollection, IVentasCollection ventasCollection)
+        private static async Task<ServiceResponse> ExecuteAllDataLoading(
+                                                IDwhRepository repository, 
+                                                ICustomersCollection customersCollection, 
+                                                IProductsCollection productCollection, 
+                                                IFechasCollection fechasCollection 
+                                                ,IVentasCollection ventasCollection
+                                                )
         {
             DimCollection dimCollection = new DimCollection(customersCollection, productCollection, fechasCollection);
             FactCollection factCollection = new FactCollection(ventasCollection);
             try
             {
-                var dim = await repository.LoadDimData(dimCollection);
-                var fact = await repository.LoadFactData(factCollection, dimCollection);
-
-                if (!dim.Success && fact.Success)
-                {
-                    return new ServiceResponse
-                    {
-                        Success = false,
-                        Message = "Error al realizar carga"
-                    };
-                }
+                var dim = await repository.LoadData(dimCollection, factCollection);
+                // var fact = await repository.LoadFactData(factCollection, dimCollection);
 
                 return new ServiceResponse
                 {
@@ -43,7 +40,7 @@ namespace Application.Services
                     Success = false,
                     Message = $"Error en el proceso ETL: {e}"
                 };
-                
+
                 throw;
             }
         }
@@ -57,7 +54,13 @@ namespace Application.Services
             var ventasCollection = scope.ServiceProvider.GetRequiredService<IVentasCollection>();
             var fechasCollection = scope.ServiceProvider.GetRequiredService<IFechasCollection>();
 
-            var ETL = await ExecuteAllDataLoading(repository, customersCollection, productCollection, fechasCollection, ventasCollection);
+            var ETL = await ExecuteAllDataLoading(
+                            repository,
+                            customersCollection,
+                            productCollection,
+                            fechasCollection
+                            ,ventasCollection
+                            );
 
             return ETL;
         }

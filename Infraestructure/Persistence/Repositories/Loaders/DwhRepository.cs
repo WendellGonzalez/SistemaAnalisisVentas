@@ -23,7 +23,7 @@ namespace Infraestructure.Persistence.Repositories.Loaders
             _context = context;
         }
 
-        public async Task<ServiceResponse> LoadDimData(DimCollection dimCollection)
+        public async Task<ServiceResponse> LoadData(DimCollection dimCollection, FactCollection factCollection)
         {
             try
             {
@@ -38,11 +38,12 @@ namespace Infraestructure.Persistence.Repositories.Loaders
                     };
                 }
 
-                var customers = await dimCollection._customersCollection.GetAllCustomersAsync();
-                var products = await dimCollection._productCollection.GetAllProductsAsync();
-                var fechas = await dimCollection._fechasCollection.GetAllFechasAsync();
+                var customersDTO = await dimCollection._customersCollection.GetAllCustomersAsync();
+                var productsDTO = await dimCollection._productCollection.GetAllProductsAsync();
+                var fechasDTO = await dimCollection._fechasCollection.GetAllFechasAsync();
+                var ventasDTO = await factCollection._ventasCollection.GetAllVentasAsync();
 
-                if(!customers.Any() || !products.Any() || !fechas.Any())
+                if (!customersDTO.Any() || !productsDTO.Any() || !fechasDTO.Any())
                 {
                     return new ServiceResponse
                     {
@@ -51,7 +52,10 @@ namespace Infraestructure.Persistence.Repositories.Loaders
                     };
                 }
 
-                var dimCustomers = customers.Select(c => new dimCustomer
+                var Customers = customersDTO
+                .GroupBy(c => c.CustomerID)
+                .Select(c => c.First())
+                .Select(c => new dimCustomer
                 {
                     CustomerID = c.CustomerID,
                     FirstName = c.FirstName!,
@@ -60,7 +64,10 @@ namespace Infraestructure.Persistence.Repositories.Loaders
                     Country = c.Country!
                 }).ToList();
 
-                var dimProducts = products.Select(p => new dimProduct
+                var Products = productsDTO
+                .GroupBy(p => p.ProductID)
+                .Select(p => p.First())
+                .Select(p => new dimProduct
                 {
                     ProductID = p.ProductID,
                     ProductName = p.ProductName,
@@ -68,7 +75,7 @@ namespace Infraestructure.Persistence.Repositories.Loaders
                     Price = p.Price
                 }).ToList();
 
-                var dimFechas = fechas.Select(f => new dimFecha
+                var Fechas = fechasDTO.Select(f => new dimFecha
                 {
                     FechaID = int.Parse(f.ToString("yyyyMMdd")),
                     Fecha = f,
@@ -81,16 +88,38 @@ namespace Infraestructure.Persistence.Repositories.Loaders
                     Cuatrimestre = (f.Month - 1) / 4 + 1,
                     Semestre = (f.Month - 1) / 6 + 1,
                     Semana = ISOWeek.GetWeekOfYear(f)
-                });
+                }).ToList();
 
                 await _context.factVentas.ExecuteDeleteAsync();
                 await _context.dimFecha.ExecuteDeleteAsync();
                 await _context.dimProducts.ExecuteDeleteAsync();
                 await _context.dimCustomers.ExecuteDeleteAsync();
 
-                _context.BulkInsert(dimFechas);
-                _context.BulkInsert(dimCustomers);
-                _context.BulkInsert(dimProducts);
+
+
+                await _context.BulkInsertAsync(Fechas);
+                await _context.BulkInsertAsync(Customers);
+                await _context.BulkInsertAsync(Products);
+
+                var dimProducts = await _context.dimProducts.ToListAsync();
+                var dimCustomers = await _context.dimCustomers.ToListAsync();
+                var dimFechas = await _context.dimFecha.ToListAsync();
+
+                var factVentas = ventasDTO
+                .GroupBy(v => new {v.OrderID, v.ProductID, v.CustomerID, v.OrderDate})
+                .Select(g => g.First())
+                .Select(v => new FactVenta()
+                {
+                    OrderID = v.OrderID,
+                    ProductKey = dimProducts.FirstOrDefault(p => p.ProductID == v.ProductID).ProductKey,
+                    CustomerKey = dimCustomers.FirstOrDefault(c => c.CustomerID == v.CustomerID).CustomerKey,
+                    FechaKey = int.Parse(v.OrderDate.ToString("yyyyMMdd")),
+                    Quantity = v.Quantity,
+                    TotalPrice = v.TotalPrice
+
+                }).ToList();
+
+                await _context.BulkInsertAsync(factVentas);
 
                 return new ServiceResponse
                 {
@@ -104,52 +133,6 @@ namespace Infraestructure.Persistence.Repositories.Loaders
                 {
                     Success = false,
                     Message = "Error cargando dimensiones: " + e.Message
-                };
-            }
-        }
-
-        public async Task<ServiceResponse> LoadFactData(FactCollection factCollection, DimCollection dimCollection)
-        {
-            try
-            {
-                if (factCollection._ventasCollection == null)
-                {
-                    return new ServiceResponse
-                    {
-                        Success = false,
-                        Message = "La lista de ventas está vacía"
-                    };
-                }
-
-                var ventas = await factCollection._ventasCollection.GetAllVentasAsync();
-                var productsDTO = await dimCollection._productCollection.GetAllProductsAsync();
-
-                var factVentas = ventas.Select(v => new FactVenta()
-                {
-                    OrderID = v.OrderID,
-                    ProductID = v.ProductID,
-                    CustomerID = v.CustomerID,
-                    FechaID = int.Parse(v.OrderDate.ToString("yyyyMMdd")),
-                    Quantity = v.Quantity,
-                    TotalPrice = v.TotalPrice
-
-                }).ToList();
-
-                _context.BulkInsert(factVentas);
-
-                return new ServiceResponse
-                {
-                    Success = true,
-                    Message = $"Insertadas {factVentas.Count} ventas."
-                };
-
-            }
-            catch (Exception e)
-            {
-                return new ServiceResponse
-                {
-                    Success = false,
-                    Message = "Error cargando fact: " + e.Message
                 };
             }
         }

@@ -81,3 +81,4 @@
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Presentation/API/obj/Debug/net9.0/API.pdb
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Presentation/API/obj/Debug/net9.0/API.genruntimeconfig.cache
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Presentation/API/obj/Debug/net9.0/ref/API.dll
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Presentation/API/obj/Debug/net9.0/API.sourcelink.json

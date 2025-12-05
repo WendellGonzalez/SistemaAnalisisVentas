@@ -15,3 +15,4 @@
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Infraestructure/obj/Debug/net9.0/refint/Infraestructure.dll
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Infraestructure/obj/Debug/net9.0/Infraestructure.pdb
 /Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Infraestructure/obj/Debug/net9.0/ref/Infraestructure.dll
+/Users/wendellgonzalez/Projects/Electiva/PROYECTO-FINAL/DEFINITIVO/SistemaAnalisisVentas/Infraestructure/obj/Debug/net9.0/Infraestructure.sourcelink.json
